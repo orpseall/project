@@ -17,7 +17,7 @@
     
 </div>
 
-<form>
+<form method="GET">
     <h2>SIGNUP</h2>
     <!-- Name field -->
   <div class="form-field">
@@ -51,7 +51,7 @@
   
     <!-- Submit button -->
   <div class="form-field">
-    <button class="btn" type="submit">Signup</button>
+    <button class="btn" type="submit" value="Signup">Signup</button>
   </div>
 
   <h3>Already registered? <a href="login.php">Login</a></h3>

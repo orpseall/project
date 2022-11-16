@@ -1,6 +1,8 @@
 <?php
 	// landing/index page
+	session_start();
 
+	$_SESSION;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,9 +23,9 @@
 		<div clas="main">
 			<ul>
 				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#">Shop</a></li>
-				<li><a href="#">Cart</a></li>
-				<li><a href="#">Login</a></li>
+				<li><a href="view/shop.php">Shop</a></li>
+				<li><a href="view.cart.php">Cart</a></li>
+				<li><a href="view.login.php">Login</a></li>
 			</ul>
 		</div>
 
@@ -34,7 +36,7 @@
 		</div>
 
 		<div class="button">
-			<a href="#" class="btn">SHOP</a>
+			<a href="view/shop.php" class="btn">SHOP</a>
 		</div>
 	</header>
 	

@@ -17,7 +17,7 @@
     
 </div>
 
-<form action="../actions/login_action.php">
+<form action="../actions/login_action.php" method="post">
     <h2>LOGIN</h2>
 
   <!-- Email field -->
@@ -33,7 +33,7 @@
   
     <!-- Submit button -->
   <div class="form-field">
-    <button class="btn" type="submit">Log in</button>
+    <button class="btn" type="submit" name="submit">Log in</button>
   </div>
 
   <h3>Not a customer yet? <a href="signup.php">Signup</a></h3>

@@ -13,3 +13,11 @@ function storeCustomer_ctr($name,$email,$password,$country,$city,$contact,$userr
 
     
 }
+
+  //--SELECT--//
+    //login customer
+    function select_onecustomer_ctr($email){
+        $selectonecustomer = new customer_class();
+        return $selectonecustomer->customer_login_cls($email);
+    }
+

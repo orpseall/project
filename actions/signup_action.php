@@ -11,13 +11,16 @@ if(isset($_POST['submit']))
     $country=$_POST['customer_country'];
     $city=$_POST['customer_city'];
     $contact=$_POST['customer_contact'];
-    $userrole=$_POST['userrole'];
+    $userrole = 2;
+    $image=NULL;
 
     //echo "$name,$email,$country,$city,$contact,$userrole";
     $results = storeCustomer_ctr($name,$email,$password,$country,$city,$contact,$userrole);
     
-    header("location: ../index.php");
-
-    
+    if ($results) {
+      header('location: ../login/loginform.php');
+  } else {
+      echo 'Registration Failed. Try again';
+  }
 
   }

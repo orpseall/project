@@ -20,11 +20,11 @@
 		<div class="logo">
 			<img src="images/logo.svg">
 		</div>
-		<div clas="main">
+		<div class="main">
 			<ul>
 				<li class="active"><a href="#">Home</a></li>
 				<li><a href="view/shop.php">Shop</a></li>
-				<li><a href="view.cart.php">Cart</a></li>
+				<li><a href="view/cart.php">Cart</a></li>
 				<li><a href="view/login.php">Login</a></li>
 			</ul>
 		</div>

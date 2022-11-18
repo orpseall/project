@@ -40,22 +40,21 @@ class db_connection
 	**/
 	function db_query($sqlQuery){
 		
-		if (!$this->db_connect()) {
-			return false;
-		} 
-		elseif ($this->db==null) {
-			return false;
-		}
-
-		//run query 
-		$this->results = mysqli_query($this->db,$sqlQuery);
-		
-		if ($this->results == false) {
-			return false;
-		}else{
-			return true;
+			if (!$this->db_connect()) {
+				return false; 
+			} 
+			elseif ($this->db==null) {
+				return false;
+			}
+	
+			//run query 
+			$this->results = mysqli_query($this->db,$sqlQuery);
 			
-		}
+			if ($this->results == false) {
+				return false;
+			}else{
+				return true;
+			}
 	}
 
 	//execute a query with mysqli real escape string

@@ -17,7 +17,7 @@
     
 </div>
 
-<form>
+<form action="../actions/login_action.php">
     <h2>LOGIN</h2>
 
   <!-- Email field -->

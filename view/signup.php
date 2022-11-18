@@ -17,7 +17,7 @@
     
 </div>
 
-<form method="GET">
+<form action="../actions/signup_action.php" method="POST">
     <h2>SIGNUP</h2>
     <!-- Name field -->
   <div class="form-field">
@@ -47,14 +47,23 @@
   
   <!-- Contact field -->
   <div class="form-field">
-    <input type="text" name="customer_contact" placeholder="Contact" required/>                         </div>
+    <input type="text" name="customer_contact" placeholder="Contact" required/>                        
+  </div>
+
+  <input type="hidden" name="userrole"  value="1"/> 
+
+  <!-- Terms & Privacy -->
+  <hr>
+  <h3><p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p></h3>
   
     <!-- Submit button -->
   <div class="form-field">
-    <button class="btn" type="submit" value="Signup">Signup</button>
+    <button class="btn" type="submit" name="submit" value="Signup">Signup</button>
   </div>
 
-  <h3>Already registered? <a href="login.php">Login</a></h3>
+  <h3>Already registered? <a href="login.php">Login</a></h3> 
+
+  <center><h3><a href="../index.php">Go back home</a></h3></center>
 
 </form>
 </body>

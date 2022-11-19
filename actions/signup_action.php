@@ -13,10 +13,10 @@ if(isset($_POST['submit']))
     $contact=$_POST['customer_contact'];
     $userrole=$_POST['userrole'];
 
-    //echo "$name,$email,$country,$city,$contact,$userrole";
-    $results = storeCustomer_ctr($name,$email,$password,$country,$city,$contact,$userrole);
+    echo "$name,$email,$country,$city,$contact,$userrole";
+    //$results = storeCustomer_ctr($name,$email,$password,$country,$city,$contact,$userrole);
     
-    header("location: ../index.php");
+    //header("location: ../index.php");
 
     
 

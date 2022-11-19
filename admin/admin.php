@@ -11,6 +11,7 @@
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="../css/admin.css">
+
    
 
 </head>
@@ -30,6 +31,8 @@
 	</header>
 
 
+
+
 <!-- add product form -->
     <div class="container">
         <div class="admin-product-form-container">
@@ -39,6 +42,36 @@
                 <input type="number" placeholder="Price" name="product_price" class="box">
                 <input type="text" placeholder="Description" name="product_desc" class="box">
                 <input type="file" accept="image/png, image/jpeg, image/jpg" name="product_image" class="box">
+
+                <!-- brand selection -->
+                <div>
+                <label>Select brand</label>
+                <select>  
+                  <option value = "BMW"> BMW   
+                  </option>  
+                  <option value = "Mercedes"> Mercedes   
+                  </option>  
+                  <option value = "Audi"> Audi  
+                  </option>  
+                  <option value = "Skoda"> Skoda  
+                  </option>  
+               </select> 
+                
+               <!-- Category selection -->
+               
+               <label>Select category</label>
+                <select>  
+                  <option value = "BMW"> BMW   
+                  </option>  
+                  <option value = "Mercedes"> Mercedes   
+                  </option>  
+                  <option value = "Audi"> Audi  
+                  </option>  
+                  <option value = "Skoda"> Skoda  
+                  </option>  
+               </select> 
+               </div>
+               
                 <input type="submit" class="btn" name="add_product" value="add product">
             </form>
         </div>

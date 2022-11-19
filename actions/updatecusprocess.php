@@ -4,23 +4,23 @@ require("../controllers/customer_controller.php");
 
 // session_start();
 
-if(isset($_POST['submit']))
+if(isset($_POST['Updatec']))
   {
+    $customer_id=$_POST['customer_id'];
     $name=$_POST['customer_name'];
     $email=$_POST['customer_email'];
-    $password=$_POST['customer_pass'];
     $country=$_POST['customer_country'];
     $city=$_POST['customer_city'];
     $contact=$_POST['customer_contact'];
     $userrole = 2;
-    // $image= NULL;
+
 
     // echo "$name,$email,$country,$city,$contact,$userrole";
-    $results = storeCustomer_ctr($name,$email,$password,$country,$city,$contact,$userrole);
+    $results = editcustomer_ctr($customer_id,$name,$email,$country,$city,$contact);
     
     
     if ($results) {
-      header('location: ../view/login.php');
+      header('location: ../admin/admin_users.php');
   } else {
       echo 'Registration Failed. Try again';
   }

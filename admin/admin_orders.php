@@ -22,7 +22,7 @@
 		</div>
 		<div class="main">
 			<ul>
-				<li><a href="admin.php">Products</a></li>
+				<li><a href="admin_product.php">Products</a></li>
 				<li class="active"><a href="#">Orders</a></li>
 				<li><a href="admin_users.php">Users</a></li>
 			</ul>

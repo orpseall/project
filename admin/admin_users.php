@@ -1,3 +1,11 @@
+
+<?php
+include('../controllers/customer_controller.php');
+
+// $customer_id= $_GET['customer_id'];
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,49 +30,64 @@
 		</div>
 		<div class="main">
 			<ul>
-				<li><a href="admin.php">Products</a></li>
+				<li><a href="admin_product.php">Products</a></li>
 				<li><a href="admin_orders.php">Orders</a></li>
 				<li class="active"><a href="#">Users</a></li>
 			</ul>
 		</div>
 	</header>
-
+<br>
+<br>
+<br>
     <!-- adding a user -->
-    <div class="container">
-        <div class="admin-product-form-container">
-            <form action="../actions/admin_action.php" method="post">
-                <h3>Add a new admin user</h3>
-                <input type="text" placeholder="Name" name="name" class="box">
-                <input type="text" placeholder="Username" name="username" class="box">
-                <input type="email" placeholder="Email" name="email" class="box">
-                <input type="password" placeholder="Password" name="password" class="box" required/>
-                <input type="text" placeholder="Country" name="country" class="box">
-                <input type="text" placeholder="City" name="city" class="box">
-                <input type="number" placeholder="Contact" name="contact" class="box">
-                <!-- submit -->
-                <input type="submit" class="btn" name="submit" value="add user">
-            </form>
-        </div>
-    </div>
-
-
-<!-- displaying product table -->
-   <div class="product-display">
+    <div class="product-display">
       <table class="product-display-table">
          <thead>
          <tr>
             <th>Name</th>
-            <th>Username</th>
             <th>Email</th>
             <th>Country</th>
             <th>City</th>
             <th>Contact</th>
+            <th>Delete</th>
+            <th>Update</th>
+
          </tr>
          </thead>
+
+
+        <tbody>
+            <?php
+                $customer = viewallcustomers_ctr();
+                foreach ((array) $customer as $acustomer) {
+                  // $customer_id = $acustomer['customer_id'];
+                    
+                    $name = $acustomer['customer_name'];
+                    $email = $acustomer['customer_email'];
+                    $country = $acustomer['customer_country'];
+                    $city = $acustomer['customer_city'];
+                    $contact = $acustomer['customer_contact'];
+           
+                    echo"
+                    <tr>
+                    <td>$name</td>
+                    <td>$email</td>
+                    <td>$country</td>
+                    <td>$city</td>
+                    <td>$contact</td>
+                    <td><a href='../actions/delete_user.php?deletec={$acustomer['customer_id']}' class= 'btn btn-primary'>Delete</a></td>
+                    <td><a href='../view/update_customer.php?customer_id={$acustomer['customer_id']}' class= 'btn btn-primary'>Update</a></td>";
+                }
+                ?>
+        </tbody>
 
          
       </table>
    </div>
+
+
+<!-- displaying product table -->
+   
 
 </div>
 

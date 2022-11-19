@@ -1,8 +1,3 @@
-<?php
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +45,7 @@
     <input type="text" name="customer_contact" placeholder="Contact" required/>                        
   </div>
 
-  <input type="hidden" name="userrole"  value="1"/> 
+  <!-- <input type="hidden" name="userrole"  value="1"/>  -->
 
   <!-- Terms & Privacy -->
   <hr>

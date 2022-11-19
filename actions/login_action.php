@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
 
   $pickedpassword= $check['customer_pass'];
 
-  echo $email, $password;
+//   echo $email, $password;
 
 
   if($check){
@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
     if(password_verify($password,$pickedpassword)){
       // echo 'successful'
       session_start();
-    //   $_SESSION['cid'] = $check['customer_id'];
+      $_SESSION['cid'] = $check['customer_id'];
       $_SESSION['role'] = $check['user_role'];
       $_SESSION['name'] = $check['customer_name'];
 
@@ -36,7 +36,7 @@ if(isset($_POST['submit'])){
     }
       else{
         echo "Login Failed. Please try again";
-      }
+    }
             
     
   }

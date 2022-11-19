@@ -1,9 +1,4 @@
-<?php
-	// landing/index page
-	session_start();
 
-	$_SESSION;
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +10,8 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+
+
 	<header>
 		<!-- navbar -->
 		<div class="logo">
@@ -25,12 +22,50 @@
 				<li class="active"><a href="#">Home</a></li>
 				<li><a href="view/shop.php">Shop</a></li>
 				<li><a href="view/cart.php">Cart</a></li>
+
+
 				<li><a href="view/login.php">Login</a></li>
 			</ul>
+
+			<div>
+                <?php
+                    session_start();
+                    if(isset($_SESSION['cid'])){
+                ?>
+                <a class="btn btn-success" style="align-self: right;" href="view/logout.php">Logout</a>
+                <?php
+                    }
+                ?>
+            </div>
 		</div>
 
 		<!-- title and shop button -->
 		<div class="title">
+		<?php
+            if(!empty($_SESSION['name'])){
+              
+                
+                echo $_SESSION['name']; 
+            }
+                ?>
+            <br>
+            <br>
+
+            <?php 
+            if(empty($_SESSION['cid'])){
+                ?>
+            <br>
+			<h3>WELCOME TO CHIMERA</h3>
+            <br>
+
+            <!-- <p class="lead">Buttons for access</p> -->
+
+
+
+
+            <?php
+            }
+            ?>
 			<h3>WELCOME TO CHIMERA</h3>
 			<h1>The Best Books for You</h1>
 		</div>

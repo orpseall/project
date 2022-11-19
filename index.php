@@ -55,7 +55,7 @@
             if(empty($_SESSION['cid'])){
                 ?>
             <br>
-			<h3>WELCOME TO CHIMERA</h3>
+			<!-- <h3>WELCOME TO CHIMERA</h3> -->
             <br>
 
             <!-- <p class="lead">Buttons for access</p> -->

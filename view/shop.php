@@ -8,7 +8,7 @@ require("../controllers/product_controller.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
-    <!-- <link rel="stylesheet" type="text/css" href="../css/shop.css"> -->
+    <link rel="stylesheet" type="text/css" href="../css/shop.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -17,14 +17,14 @@ require("../controllers/product_controller.php");
     <link rel="stylesheet" type="text/css" href="../css/shop_style.css">
 
 	<header>
-        <!-- navbar -->
+        
 		<div class="logo">
 			<img src="../images/logo_black.svg">
 		</div>
-		<div clas="main">
+		<div clas="main_header">
 			<ul>
 				<li><a href="../index.php">Home</a></li>
-				<li class="active"><a href="#">Shop</a></li>
+				<li class="active_header"><a href="#">Shop</a></li>
 				<li><a href="cart.php">Cart</a></li>
 				<li><a href="login.php">Login</a></li>
 			</ul>

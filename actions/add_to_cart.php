@@ -14,6 +14,7 @@ require("../controllers/cart_controller.php");
      $qty= 1;
 
      echo $p_id,$c_id,$ip_add,$qty;
+     
     //duplicate checker
           $result= addtocart_ctr($p_id,$ip_add,$c_id,$qty);
          if ($result) {

@@ -146,7 +146,7 @@ $cartitems = viewcart_ctr($c_id);
                                         <div class='col-lg-4 col-md-6 mb-4 mb-lg-0'>
 
                                         <div class='d-flex mb-4' style='max-width: 300px'>
-                                            <a href='../actions/deleteqty_cart.php?dec=$product_id' class='btn btn-primary'>-</a>
+                                            <a href='../actions/manage_qty_cart.php?dec=$product_id' class='btn btn-primary'>-</a>
                                             
                                         <!-- Quantity -->
                                               <div>

@@ -16,7 +16,7 @@ if(isset($_POST['submit']))
     // $image= NULL;
 
     // echo "$name,$email,$country,$city,$contact,$userrole";
-    $results = storeCustomer_ctr($name,$email,$password,$country,$city,$contact,$userrole);
+    $results = addCustomer_ctr($name,$email,$password,$country,$city,$contact,$userrole);
     
     
     if ($results) {

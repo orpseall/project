@@ -8,41 +8,23 @@ include('../controllers/product_controller.php');
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admin page</title>
-
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="../css/product.css" rel="stylesheet">
-
-
-
+    <title>products</title>
 </head>
 
 <body>
-    <header>
-        <!-- navbar -->
-        <div class="logo">
-            <img src="../images/logo_black.svg">
-        </div>
-        <div class="main">
-            <ul>
-                <li class="active"><a href="#">Products</a></li>
-                <li><a href="admin_orders.php">Orders</a></li>
-                <li><a href="admin_users.php">Users</a></li>
-
-            </ul>
-        </div>
-    </header>
 
 
 
+    <br>
+    <h1> Add products</h1>
+    <br>
+    <!-- <a class="btn btn-primary" href="../actions/Add_brand.php" role="button">insert</a> -->
     <div class="container-fluid px-1 py-5 mx-auto">
         <div class="row d-flex justify-content-center">
             <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
@@ -120,6 +102,7 @@ include('../controllers/product_controller.php');
                         <div class="row justify-content-end">
                             <div class="form-group col-sm-6">
                                 <button type="submit" value="Add new product" name="submitprod" class="btn btn-primary">Add Product</button>
+                               <a href='../view/all_product.php' value="Add new product"class= "btn btn-primary">View products</a>
                             </div>
                         </div>
 
@@ -130,66 +113,12 @@ include('../controllers/product_controller.php');
         </div>
     </div>
 
-    <br><br>
 
-    <!-- displaying product table -->
-    <div class="product-display">
-        <table class="product-display-table">
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>brand</th>
-                    <th>category</th>
-                    <th>price</th>
-                    <th>description</th>
-                    <th>keywords</th>
-                    <th>image</th>
-                    <th>Delete</th>
-                    <th>Update</th>
-
-
-                </tr>
-            </thead>
-
-
-            <tbody>
-                <?php
-                $product = viewallprod_ctr();
-                foreach ((array) $product as $aproduct) {
-                    
-                    $product_title = $aproduct['product_title'];
-                    $pcat = $aproduct['product_cat'];
-                    $pbrand = $aproduct['product_brand'];
-                    $pprice = $aproduct['product_price'];
-                    $pdesc = $aproduct['product_desc'];
-                    $pkey = $aproduct['product_keywords'];
-                    $product_image = $aproduct['product_image'];
-                    
-                    echo"
-                    <tr>
-                    <td>$product_title</td>
-                    <td>$pcat</td>
-                    <td>$pbrand</td>
-                    <td>$pprice</td>
-                    <td>$pdesc</td>
-                    <td>$pkey</td>
-                    <td><img src=' ../images/$product_image' class='card-img-top' style='width: 50px; height: 50px ; ' ></td>
-                    <td><a href='../view/single_product.php?product_id={$aproduct['product_id']}' class= 'btn btn-primary'>Delete</a></td>
-                    <td><a href='../view/update_product.php?product_id={$aproduct['product_id']}' class= 'btn btn-primary'>Update</a></td>";
-                }
-                ?>
-            </tbody>
-        </table>
-
-        <!-- backend dynamic code goes here -->
-        </table>
-    </div>
-
-    </div>
-
-
-
+</body>
 
 </body>
 
 </html>
+
+
+<!-- get and post variable for forms php -->

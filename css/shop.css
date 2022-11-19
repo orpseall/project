@@ -29,7 +29,7 @@ ul li a:hover{
     color: #fff;
 }
 
-ul li.active_header a{
+ul li.active a{
     background-color: #000;
     color: #fff;
 }
@@ -42,7 +42,7 @@ ul li.active_header a{
     margin-left: 25px;
 }
 
-.main_header{
+.main{
     max-width: 1200px;
     margin: auto;
 }

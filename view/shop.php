@@ -21,18 +21,23 @@ require("../controllers/product_controller.php");
 		<div class="logo">
 			<img src="../images/logo_black.svg">
 		</div>
-		<div clas="main_header">
+		<div class="main_header">
 			<ul>
 				<li><a href="../index.php">Home</a></li>
 				<li class="active_header"><a href="#">Shop</a></li>
 				<li><a href="cart.php">Cart</a></li>
-				<li><a href="login.php">Login</a></li>
 			</ul>
 		</div>
     </header>
 </head>
 
 <body>
+<br>
+<br>
+<div>
+<a href="../view/product_search.php"class='btn btn'>Search</a>
+
+</div>
 
   
     <section class="padding-large">
@@ -55,7 +60,8 @@ require("../controllers/product_controller.php");
                    echo"
 					
 						<figure class='product-style'>
-							<img src='../images/tab-item1.jpg' alt='Books' class='product-item'>
+						<img src=' ../images/$product_image' class='product-item' style='height: 400px ; ' >
+							
 							<figcaption>
 								<h3>$product_title</h3>
 								<p>$pdesc</p>

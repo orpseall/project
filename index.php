@@ -23,29 +23,35 @@
 				<li><a href="view/shop.php">Shop</a></li>
 				<li><a href="view/cart.php">Cart</a></li>
 
-
-				<li><a href="view/login.php">Login</a></li>
-			</ul>
-
-			<div>
-                <?php
-                    session_start();
-                    if(isset($_SESSION['cid'])){
+				<?php 
+            if(empty($_SESSION['cid'])){
                 ?>
-                <a class="btn btn-success" style="align-self: right;" href="view/logout.php">Logout</a>
+               <li><a href="view/login.php">Login</a></li>
+            <?php
+            }
+            ?>
+				
+				<?php
+                    session_start();
+                    if(!empty($_SESSION['cid'])){
+                ?>
+               <li><a href="view/logout.php">Logout</a></li>
                 <?php
                     }
                 ?>
-            </div>
+			</ul>
+
+			
+
 		</div>
 
 		<!-- title and shop button -->
 		<div class="title">
 		<?php
             if(!empty($_SESSION['name'])){
-              
-                
-                echo $_SESSION['name']; 
+               echo $_SESSION['name'];
+				echo'	<h3>WELCOME TO CHIMERA</h3>
+				<h1>The Best Books for You</h1>'; 
             }
                 ?>
             <br>
@@ -54,20 +60,12 @@
             <?php 
             if(empty($_SESSION['cid'])){
                 ?>
-            <br>
-			<!-- <h3>WELCOME TO CHIMERA</h3> -->
-            <br>
-
-            <!-- <p class="lead">Buttons for access</p> -->
-
-
-
-
+               <h3>WELCOME TO CHIMERA</h3>
+				<h1>The Best Books for You</h1>
             <?php
             }
             ?>
-			<h3>WELCOME TO CHIMERA</h3>
-			<h1>The Best Books for You</h1>
+		
 		</div>
 
 		<div class="button">

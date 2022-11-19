@@ -20,7 +20,12 @@ $cat = selectonecat_ctr($prod['product_cat']);
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../css/shop_style.css">
     <link rel="stylesheet" type="text/css" href="../css/shop.css">
+
+
+    <link rel="stylesheet" type="text/css" href="../css/shop_style.css">
+
   
+	<!-- <a href='../actions/add_to_cart.php?product_id={$aproduct['product_id']}'class='btn btn'>add to cart</a> --> 
 
     <!-- <link rel="stylesheet" type="text/css" href="../style.css">  -->
 	<header>
@@ -50,7 +55,7 @@ $cat = selectonecat_ctr($prod['product_cat']);
 		<div class="row">
 
 			<div class="col-md-6">
-				<a href="#" class="product-image"><img src="../images/main-banner2.jpg"></a>
+				<a href="#" class="product-image"><img src="../images/jpg"></a>
 			</div>
 
 			<div class="col-md-6 pl-5">
@@ -67,7 +72,7 @@ $cat = selectonecat_ctr($prod['product_cat']);
 					</p>
 					
 
-					<a href="../actions/add_to_cart.php"type="submit" name="add-to-cart" class="button">Add to cart</a>
+					<a href="../actions/add_to_cart.php?product_id={$prod['product_id']}'" type="submit" name="add-to-cart" class="btn btn">Add to cart</a>
 					
 				</div>
 			</div>

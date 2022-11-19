@@ -12,15 +12,15 @@ if(isset($_POST['submitprod'])){
     
     $prodcat =$_POST['prodcat'];
     $prodbrand =$_POST['prodbrand'];
-    $prodtitle =$_POST['product_title']; 
-    $prodprice =$_POST['product_price'];
-    $proddesc =$_POST['product_desc'];
-    $prodkeywords=$_POST['product_keys'];
-    $prodimage =$_FILES['product_image']['name'];
+    $prodtitle =$_POST['prodtitle']; 
+    $prodprice =$_POST['prodprice'];
+    $proddesc =$_POST['proddesc'];
+    $prodkeywords=$_POST['prodkeywords'];
+    $prodimage =$_FILES['prodimage']['name'];
     $targetdir= "../images/product/";
     $image = $targetdir . $prodimage;
-    $file = '../images/product/' .basename($_FILES["product_image"]["name"]);
-    move_uploaded_file($_FILES["product_image"]["tmp_name"],$file);
+    $file = '../images/product/' .basename($_FILES["prodimage"]["name"]);
+    move_uploaded_file($_FILES["prodimage"]["tmp_name"],$file);
     
 //     echo"$prodcat,$prodbrand,$prodtitle,$prodprice,$file";
 
@@ -33,7 +33,7 @@ if(isset($_POST['submitprod'])){
 
     if ($result) {
 
-        if (move_uploaded_file($_FILES["product_image"]["tmp_name"],"../images/product/".$_FILES["product_image"]["name"])) {
+        if (move_uploaded_file($_FILES["prodimage"]["tmp_name"],"../images/product/".$_FILES["prodimage"]["name"])) {
             echo "success";
     
         }else {

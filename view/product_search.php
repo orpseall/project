@@ -11,7 +11,6 @@ include("../controllers/product_controller.php");
 ?>
 
 
-
 <!DOCTYPE html>
 <html>
 

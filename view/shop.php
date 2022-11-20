@@ -77,7 +77,8 @@ require("../controllers/product_controller.php");
             </div>
         </div>
     </section>
-
+	
+	
 
 </body>
 

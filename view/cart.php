@@ -1,11 +1,8 @@
 <?php
 include("../controllers/cart_controller.php");
 include("../settings/core.php");
-
 $c_id = get_id();
 $cartitems = viewcart_ctr($c_id);
-
-
 ?>
 
 <!doctype html>
@@ -21,35 +18,16 @@ $cartitems = viewcart_ctr($c_id);
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="../css/bootsrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="../css/shop_style.css">
 </head>
 
 <body>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-
-
-
-
-
-
-
     <section class="h-100 gradient-custom">
         <div class="container py-5">
             <div class="row d-flex justify-content-center my-4">
                 <div class="col-md-8">
                     <div class="card mb-4">
-                        <div class="card-header py-3">
+                        <div class="card-header py-9">
                             <h5 class="mb-0">Cart items</h5>
                         </div>
                         <div class="card-body">
@@ -63,8 +41,6 @@ $cartitems = viewcart_ctr($c_id);
                                 $product_image = $oneitem['product_image'];
                                 $product_qty =  $oneitem['qty'];
                             
-
-
 
                                 if ($product_qty == 1) {
                                  echo " 
@@ -99,7 +75,7 @@ $cartitems = viewcart_ctr($c_id);
                                         <div class='d-flex mb-4' style='max-width: 300px'>
                                             <a href='#' class='btn btn-primary'>-</a>
                                         <!-- Quantity -->
-                                              <div>
+                                              <div><br>
                                                 Quantity: $product_qty
                                               </div>
                                                  <a href='../actions/manage_qty_cart.php?inc=$product_id' class='btn btn-primary'>+</a>
@@ -145,7 +121,7 @@ $cartitems = viewcart_ctr($c_id);
                                         </div>
                                         <div class='col-lg-4 col-md-6 mb-4 mb-lg-0'>
 
-                                        <div class='d-flex mb-4' style='max-width: 300px'>
+                                        <div class='d-flex mb-4' style='max-width: 400px'>
                                             <a href='../actions/manage_qty_cart.php?dec=$product_id' class='btn btn-primary'>-</a>
                                             
                                         <!-- Quantity -->
@@ -166,18 +142,13 @@ $cartitems = viewcart_ctr($c_id);
                                     <!-- Single item -->
                                     <hr class='my-4' /> ";
 
-
-
-
-
                             }
-
-
-
-
                             }
 
                             ?>
+                         <a href='../view/shop.php' class='btn btn'>continue shopping</a>
+                         <a href='../view/payment.php' class='btn btn'>Proceed to payment</a>
+
 
 
                         </div>

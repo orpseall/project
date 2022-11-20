@@ -86,6 +86,16 @@ function editprod_ctr($prod_id,$productcat,$productbrand,$prod_title,$productpri
 }
 
 
+function delete_product_controller($id){
+    // create an instance of the Product class
+    $product_instance = new BrandClass();
+    // call the method from the class
+    return $product_instance->delete_one_product($id);
+
+}
+
+
+
 
 // function editcat_ctr($catid,$newcatname){
 //     $updateonecat =new BrandClass();

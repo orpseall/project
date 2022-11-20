@@ -89,7 +89,10 @@ class Brandclass extends db_connection{
     return $this->db_query($sql);
     }
 
-
+    function delete_one_product($id){
+		// return true or false
+		return $this->db_query("DELETE from `products` where product_id = '$id'");
+	}
 
 }
 

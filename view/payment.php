@@ -6,7 +6,6 @@ $c_id = get_id();
 $cartitems = viewcart_ctr($c_id);
 $email=email_ctr($c_id);
 $email= $email['customer_email'];
-
 $total= select_total_qty_from_cart_ctr($c_id);
 $total=$total[0];
 $total1=$total['SUM(qty)'];
